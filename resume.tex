@@ -1,0 +1,278 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[main=english]{babel}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[a4paper, top=1cm, bottom=1cm, left=1.2cm, right=1.2cm, includefoot, footskip = 10pt]{geometry}%, showframe
+\usepackage{color}
+
+%special characters, e.g. external link icons
+\usepackage{fontawesome}    %\faExternalLink, \faHandORight, \faGlobe
+\usepackage{marvosym}       %\Telefon, \Letter, \Mundus, \ComputerMouse
+\usepackage{pifont}         %\ding{43}   
+
+%================================================
+%--------- dotted underline -------------------
+\usepackage{tikz}
+\newcommand{\udensdot}[1]{%
+    \tikz[baseline=(todotted.base)]{
+        \node[inner sep=0.5pt,outer sep=0.5pt] (todotted) {#1};
+        \draw[densely dotted] (todotted.south west) -- (todotted.south east);
+    }%
+}%
+%--- underline with dotted line ---
+\newcommand{\myHref}[2]{\udensdot{\hspace{-1.2pt}\href{#1}{#2}\hspace{-4pt}}\hspace{-1.2pt}}
+%================================================
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\first}{1\textsuperscript{st}}
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+\newcommand{\resumeItemCustom}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+\newcommand{\resumeSubheadingEduFive}[2]{
+  \vspace{-1pt}
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    %   \textit{\small#3} \\
+    %   {\small GPA: #4}
+    \end{tabular*}\vspace{-12pt}
+}
+\newcommand{\resumeJobSubheadingC}[3]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#2} & {\small #3}
+    \end{tabular*}\vspace{-5pt}
+    
+    % \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      {\textit{\small #1}}
+    %   & {[\small \texttt{#4}]} \\
+    % \end{tabular*}
+    \vspace{-5pt}
+}
+
+\newcommand{\resumeJobSubheadingD}[2]{
+    \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\small #2}
+    \end{tabular*}\vspace{-5pt}
+    \vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\twoRowCell}[2]{\begin{tabular}[t]{@{}l@{}}#1\\#2\end{tabular}}
+
+\newcommand\YUGE{\fontsize{1000}{10000}\selectfont}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\lfoot{xx}\cfoot{yy}\rfoot{zz}%ver.: March 2018}
+\definecolor{mygrayA}{gray}{0.3}
+\definecolor{mygrayB}{gray}{0.2}
+% \definecolor{contactgray}{gray}{0.3}
+
+
+%---------- Define formatted text ----------
+\newcommand{\mytitle}{\Huge Duc Huy \textbf{Nguyen}}
+\newcommand{\email}{%
+\myHref{mailto:ndhuy01@gmail.com}{ndhuy01@gmail.com}}
+% \myHref{mailto:hung.vu@case.edu}{hung.vu@case.edu}}
+\newcommand{\linkedin}{%
+\myHref{https://www.linkedin.com/in/duchuy-nguyen/}{linkedin.com/in/duchuy-nguyen}}
+\newcommand{\github}{%
+\myHref{https://github.com/huynd2001}{github.com/huynd2001}}
+\newcommand{\address}{%
+\myHref{https://www.google.com/maps/place/Case+Western+Reserve+University/@47.6589452,-122.2937262,13z/data=!4m5!3m4!1s0x8830fb893658122d:0x719069e07bb00b91!8m2!3d41.5043413!4d-81.6083838}{Cleveland, OH}}
+\newcommand{\phoneUS}{%
+(+1)~216-507-8369}
+\newcommand{\phoneVN}{%
+(+84)~91 553 6899}
+
+
+%---------- DOCUMENT ----------
+\begin{document}
+
+%----------HEADING-----------------
+\begin{minipage}{0.66\linewidth}
+        \mytitle{}\par
+\end{minipage}
+\begin{minipage}{0.333\linewidth}
+    {\flushright
+        \small{
+        \faPhone{} \phoneUS{} \\
+        \phoneVN{}\\
+        \faEnvelope{} \email{} \\
+        \faLinkedin{} \linkedin{} \\
+        \faGithub{} \github{} \\
+        \faMapMarker{} \address{} \\
+        }
+    }
+\end{minipage}
+
+\vspace{-10pt}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+
+\hspace{10pt}\textbf{Snowflake} \hfill {\small May 2022 -- Aug 2022} \\
+  \vspace{-2pt}
+  \hspace{10pt}{\small \textit{Core Software Engineer Intern | \textcolor{gray}{Java, C++}}}
+  % \begin{itemize}[leftmargin=31pt]
+  % \vspace{-10pt}
+  %   \setlength\itemsep{-5pt}
+  %   \vspace{-7pt}
+  % \end{itemize}
+
+\hspace{10pt}\textbf{MTI Vietnam AI Lab} \hfill {\small Mar 2021 -- July 2021} \\
+  \vspace{-2pt}
+  \hspace{10pt}{\small \textit{AI Engineer Intern | \textcolor{gray}{Javascript, TypeScript, C\#, Python}}}
+  \begin{itemize}[leftmargin=31pt]
+  \vspace{-10pt}
+    \setlength\itemsep{-5pt}
+      \item {\small Maintained an old Proof of Concept frontend codebase using .NET Blazor Framework in C\#}
+      \item {\small Developed a frontend web application to query API requests history using AngularJS in Typescript}
+      \item {\small Authenticated requests to access transaction history using Cognito and AWS Lambda}
+      \item {\small Stored and retrieved transaction history on DynamoDB}
+    \vspace{-7pt}
+  \end{itemize}
+
+\hspace{10pt}\textbf{FPT AI} \hfill {\small May 2020 -- Aug 2020} \\
+  \vspace{-2pt}
+  \hspace{10pt}{\small \textit{AI Intern | \textcolor{gray}{Python, Javascript}}}
+  \begin{itemize}[leftmargin=31pt]
+  \vspace{-10pt}
+    \setlength\itemsep{-5pt}
+      \item {\small Researched an invoice information extractor using Deep Learning library Tensorflow and Image Processing library OpenCV}
+      \item {\small Developed a website to showcase the unit’s products using ReactJS framework}
+    \vspace{-7pt}
+  \end{itemize}
+  
+  \hspace{10pt}\textbf{CWRU Department of Computer and Data Science} \hfill {\small Aug 2021 -- Present} \\
+  \vspace{-2pt}
+  \hspace{10pt}{\small \textit{Teaching Assistant}}
+  \begin{itemize}[leftmargin=31pt]
+  \vspace{-10pt}
+    \setlength\itemsep{-5pt}
+      \item {\small Course: Software Craftsmanship}
+      \item {\small Holding weekly office hours to help 50 students with course-related topics}
+      \item {\small Grading programming assignments and quizzes for students}
+      \vspace{-7pt}
+  \end{itemize}
+% \vspace{-15.5pt}
+
+%-------------------------------------------
+\section{Awards}
+\hspace{10pt}\textbf{International Collegiate Programming Contest (ICPC)} \hfill {\small 2019 -- 2021}
+
+\begin{itemize}[leftmargin=31pt]
+\vspace{-10pt}
+\setlength\itemsep{-5pt}
+    \item {\small Participated for CWRU ICPC team and achieve the First North American Championship in 2020}
+    \item {\small North America Championship: Placed $7^{th}$ in 2021 and $16^{th}$ in 2020}
+    \item {\small North America East Division Championship: Placed $10^{th}$ in 2020}
+    \item {\small East Central Regional Contest: Placed $6^{th}$ in 2020 and $6^{th}$ in 2019}
+    \vspace{-7pt}
+\end{itemize}
+
+%-----------PROJECTS-----------------
+\section{Projects}
+
+\hspace{10pt}\textbf{Parody Essay Generator} {\small | \textit{\textcolor{gray}{Javascript, C++, NodeJS}}} \hfill {\small \href{http://vaodoan.herokuapp.com/}{\faGlobe}}
+  \begin{itemize}[leftmargin=31pt]
+  \vspace{-10pt}
+    \setlength\itemsep{-5pt}
+      \item {\small Developed a website generating essays based on a given prompt}
+      \item {\small Developed back-end using NodeJS to handle requests}
+      \item {\small Implemented essay generation algorithm using C++ by switching synonyms and sentence formations}
+      \vspace{-5pt}
+  \end{itemize}
+
+%  \hspace{10pt}\textbf{The Race Game} {\small | \textit{\textcolor{gray}{Java, LibGDX}}} \hfill {\small \href{https://github.com/huynd2001/the-race}{\faGithub{}/the-race}}
+%   \begin{itemize}[leftmargin=31pt]
+%   \vspace{-10pt}
+%     \setlength\itemsep{-5pt}
+%       \item {\small Developed a puzzle game submitted as a submission to HackCWRU 2020 Hackathon}
+%       \item {\small Created using LibGDX and implemented a procedural generation algorithm for maze generations}
+%       \vspace{-5pt}
+%   \end{itemize}
+
+\hspace{10pt}\textbf{YACHT Events Manager} {\small | \textit{\textcolor{gray}{Java, Dart, Flutter, AndroidSDK, Gradle}}} \hfill {\small \href{https://github.com/huynd2001/yacht}{\faGithub{}/yacht}}
+  \begin{itemize}[leftmargin=31pt]
+  \vspace{-10pt}
+    \setlength\itemsep{-5pt}
+      \item {\small Developed an app allows users to schedule events and stream news using Dart, Java \& Kotlin}
+      \item {\small Streamlined most trending news and tweets from Twitter and Reddit with minimal latency}
+      \item {\small Utilized Flutter to create a UI that displays most trending news and users' upcoming events}
+      \item {\small Implemented calendar's features allowing users to schedule up to 1000 events using Java \& Kotlin}
+      \vspace{-5pt}
+  \end{itemize}
+ 
+  \hspace{10pt}\textbf{Discord Talkshow Overlay} {\small | \textit{\textcolor{gray}{TypeScript, NodeJS, DiscordJS, Socket.IO, AngularJS}}} \hfill {\small \href{https://github.com/huynd2001/talkshow-bot}{\faGithub{}/talkshow-bot}}
+  \begin{itemize}[leftmargin=31pt]
+  \vspace{-10pt}
+    \setlength\itemsep{-5pt}
+      \item {\small Developed a real time streaming pipeline for streamers to displays viewers' chats from Discord channels to streaming platforms }
+      \item {\small Designed a customizable overlay using AngularJS that allow streamers to change size and the number of chats being displayed}
+      \item {\small Utilize Socket.IO and DiscordJS to stream chats and filter inappropriate messages from multiple Discord channels}
+      \vspace{-5pt}
+  \end{itemize}
+
+%--------TECHNICAL SKILLS------------
+\section{Skills}
+    \hspace{10pt}\textbf{Languages} {\small C++, Java, Python, C\#, Typescript, JavaScript, C}
+
+    \hspace{10pt}\textbf{Tools} {\small Gradle, NodeJS, ReactJS, Tensorflow, OpenCV, Tkinter, Blazor, AWS Lambda, DynamoDB, AngularJS, SQL, Docker}
+
+    \hspace{10pt}\textbf{Skills} {\small Generation Algorithms, Computer Vision, Optimization Algorithms, Machine Learning, Fullstack Developer}
+    \vspace{-10pt}
+      
+%-----------EDUCATION-----------------
+\section{Education}
+    \hspace{10pt}\textbf{Case Western Reserve University} \hfill {\small Aug 2019 - Dec 2023}\\
+    % \vspace{-2pt}
+    \hspace{10pt}{\small \textit{Bachelor of Science in Computer Science}}
+    \hfill GPA: 3.96
+    % \vspace{-8pt}
+
+    \hspace{10pt}\textbf{Coursework} {\small Data Structure, Algorithms, Software Craftsmanship, Operating System, Concurrent Programming, Database, Software Engineering, Computer Networks}
+%-------------------------------------------
+\end{document}
