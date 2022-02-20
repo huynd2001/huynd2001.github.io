@@ -12,7 +12,7 @@
 				  })
 				  .then((commits) => {
 					var modified = commits[0]['commit']['committer']['date'];
-					if(modified != "{{ page.date | date: "%Y-%m-%d %H:%M %Z" }}") {
+					if(modified != "{{ page.date | date_to_rfc822}}") {
 					  document.getElementById('last-modified').textContent = "Last Modified: " + modified;
 					}
 				  });
@@ -39,7 +39,7 @@
         		<li><a href="https://github.com/huynd2001">github</a></li>
                 <li><a href="/resume.pdf">resume</a></li>
 			</ul>
-			<span id='last-modified'>
+			<span id='last-modified'></span>
 		</footer>
 	</body>
 </html>
