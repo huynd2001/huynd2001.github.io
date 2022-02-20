@@ -13,7 +13,7 @@
 				  .then((commits) => {
 					var modified = commits[0]['commit']['committer']['date'];
 					console.log(modified);
-					document.getElementById('last-modified').textContent = "Last Modified: " + Date.parse(modified).toTimeString();
+					document.getElementById('last-modified').textContent = "Last Modified: " + (new Date(Date.parse(modified))).toTimeString();
 				  });
 			  }
 			}
