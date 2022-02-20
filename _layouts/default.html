@@ -3,7 +3,7 @@
 	<head>
 		<title>{{page.title}}</title>
         <link rel="stylesheet" type="text/css" href="/css/main.css">
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 			function setModifiedDate() {
 			  if (document.getElementById('last-modified')) {
 				fetch("https://api.github.com/repos/{{ site.github.owner_name }}/{{ site.github.repository_name }}/commits?path={{ page.path }}")
@@ -18,7 +18,7 @@
 				  });
 			  }
 			}
-		  </script>
+		  </script> -->
 	</head>
 	<body onload="setModifiedDate();">
 		<nav>
@@ -39,7 +39,7 @@
         		<li><a href="https://github.com/huynd2001">github</a></li>
                 <li><a href="/resume.pdf">resume</a></li>
 			</ul>
-			<span id='last-modified'></span>
+			<p>Last modified: {{page.modified}}</p>
 		</footer>
 	</body>
 </html>
