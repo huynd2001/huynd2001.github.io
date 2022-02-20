@@ -3,7 +3,7 @@
 	<head>
 		<title>{{page.title}}</title>
         <link rel="stylesheet" type="text/css" href="/css/main.css">
-		<!-- <script type="text/javascript">
+		<script type="text/javascript">
 			function setModifiedDate() {
 			  if (document.getElementById('last-modified')) {
 				fetch("https://api.github.com/repos/{{ site.github.owner_name }}/{{ site.github.repository_name }}/commits?path={{ page.path }}")
@@ -12,13 +12,11 @@
 				  })
 				  .then((commits) => {
 					var modified = commits[0]['commit']['committer']['date'];
-					if(modified != "{{ page.date | date_to_rfc822}}") {
-					  document.getElementById('last-modified').textContent = "Last Modified: " + modified;
-					}
+					document.getElementById('last-modified').textContent = "Last Modified: " + "{{" + modified + " | date_to_rfc822}}";
 				  });
 			  }
 			}
-		  </script> -->
+		  </script>
 	</head>
 	<body onload="setModifiedDate();">
 		<nav>
@@ -39,7 +37,7 @@
         		<li><a href="https://github.com/huynd2001">github</a></li>
                 <li><a href="/resume.pdf">resume</a></li>
 			</ul>
-			<p>Last modified: {{page.modified}}</p>
+			<p id="last-modified"></p>
 		</footer>
 	</body>
 </html>
