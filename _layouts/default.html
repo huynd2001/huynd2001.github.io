@@ -12,7 +12,8 @@
 				  })
 				  .then((commits) => {
 					var modified = commits[0]['commit']['committer']['date'];
-					document.getElementById('last-modified').textContent = "Last Modified: " + "{{" + modified + " | date_to_rfc822}}";
+					console.log(modified);
+					// document.getElementById('last-modified').textContent = "Last Modified: " + (new Date(modified)).toTimeString();
 				  });
 			  }
 			}
